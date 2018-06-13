@@ -13,9 +13,7 @@ app.use(function(req, res, next) {
 
 app.get("/", function(req, res, next) {
   axios
-    .get(
-      "https://api.darksky.net/forecast/ac579da85ad0806cb406403e638ea8a9/37.8267,-122.4233"
-    )
+    .get("https://api.darksky.net/forecast/api_key/37.8267,-122.4233")
     .then(resp => res.send(resp.data))
     .catch(next);
 });

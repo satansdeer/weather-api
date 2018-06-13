@@ -2,7 +2,7 @@
   "name": "Weather api wrapper",
   "description": "Darksky API wrapper. Required to avoid CORS error. Used in https://basicreact.com course.",
   "repository": "https://github.com/satansdeer/weather-api",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "logo": "https://raw.githubusercontent.com/satansdeer/weather-api/master/darksky-icon.jpg",
   "keywords": ["node", "express", "static"],
   "env": {
     "DARKSKY_API_KEY": {

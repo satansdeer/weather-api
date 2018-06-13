@@ -1,0 +1,8 @@
+{
+  "name": "Weather api wrapper",
+  "description": "A barebones Node.js app using Express 4",
+  "repository": "https://github.com/satansdeer/weather-api",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "static"]
+}
+

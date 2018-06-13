@@ -1,5 +1,5 @@
 {
-  "name": "Weather api wrapper",
+  "name": "Weather API wrapper",
   "description": "Darksky API wrapper. Required to avoid CORS error. Used in https://basicreact.com course.",
   "repository": "https://github.com/satansdeer/weather-api",
   "logo": "https://raw.githubusercontent.com/satansdeer/weather-api/master/darksky-icon.jpg",

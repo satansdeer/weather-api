@@ -15,10 +15,12 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get("/", function(req, res, next) {
+app.get("/forecast/:latLong", function(req, res, next) {
   axios
     .get(
-      `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/37.8267,-122.4233`
+      `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/${
+        req.params.latLong
+      }`
     )
     .then(resp => res.send(resp.data))
     .catch(next);

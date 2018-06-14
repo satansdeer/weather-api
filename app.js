@@ -2,6 +2,10 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 
+require("dotenv").load();
+
+const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY;
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -13,9 +17,13 @@ app.use(function(req, res, next) {
 
 app.get("/", function(req, res, next) {
   axios
-    .get("https://api.darksky.net/forecast/api_key/37.8267,-122.4233")
+    .get(
+      `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/37.8267,-122.4233`
+    )
     .then(resp => res.send(resp.data))
     .catch(next);
 });
 
-app.listen(3001, () => console.log("Example app listening on port 3001!"));
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
